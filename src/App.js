@@ -39,6 +39,7 @@ function App() {
       <div className="app">
         <Routes>
         {console.log(books)}
+          <Route exact path="/MyRead" element={<Shelves books={books} updateShelf={updateShelf} setView={setBookView} />} />
           <Route exact path="/" element={<Shelves books={books} updateShelf={updateShelf} setView={setBookView} />} />
           <Route exact path="/detail" element={<Detail book={bookView}/>} />
           <Route exact path="/search" element={<SearchBook books={books} updateShelf={updateShelf} setView={setBookView} />} />
